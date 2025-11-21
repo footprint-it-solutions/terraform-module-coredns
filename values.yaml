@@ -1,0 +1,5 @@
+---
+fullnameOverride: coredns
+
+serviceAccount:
+  create: true
