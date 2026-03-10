@@ -1,7 +1,7 @@
 variable "chart_version" {
   description = "Helm chart version to install"
   type        = string
-  default     = "1.16.1"
+  default     = "1.29.0"
 }
 
 variable "cluster_ip" {
@@ -14,4 +14,10 @@ variable "replica_count" {
   description = "The number of CoreDNS replicas."
   type        = number
   default     = 2
+}
+
+variable "topology_spread_constraints" {
+  description = "Topology spread constraints for CoreDNS."
+  type        = any
+  default     = []
 }

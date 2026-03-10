@@ -6,17 +6,11 @@ resource "helm_release" "coredns" {
   namespace  = "kube-system"
 
   values = [
-    file("${path.module}/values.yaml")
-  ]
-
-  set = [
-    {
-      name  = "replicaCount"
-      value = var.replica_count
-    },
-    {
-      name  = "service.clusterIP"
-      value = var.cluster_ip
-    }
+    file("${path.module}/values.yaml"),
+    yamlencode({
+      replicaCount              = var.replica_count
+      service                   = { clusterIP = var.cluster_ip }
+      topologySpreadConstraints = var.topology_spread_constraints
+    })
   ]
 }
