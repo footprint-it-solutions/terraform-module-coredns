@@ -10,12 +10,6 @@ variable "cluster_ip" {
   default     = "172.20.0.10"
 }
 
-variable "k8s_app_label_override" {
-  description = "Override the k8s-app label for the CoreDNS deployment."
-  type        = string
-  default     = "kube-dns"
-}
-
 variable "replica_count" {
   description = "The number of CoreDNS replicas."
   type        = number
