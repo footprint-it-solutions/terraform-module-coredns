@@ -14,11 +14,14 @@ At release time, move the entries from here to a new release section.
 
 ### Additions
 
+- Added `topology_spread_constraints` variable to allow distribution of replicas across availability zones.
+
 ### Fixes
 
 ### Changes
 
-### Removals
+- Updated default `replica_count` to 3 for improved high availability.
+- Refactored `helm_release` to use `yamlencode` for all values.
 
 ## [1.0.0] - 2022-11-21
 
