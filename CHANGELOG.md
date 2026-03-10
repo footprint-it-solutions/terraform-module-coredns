@@ -12,13 +12,19 @@ upcoming relases.
 
 At release time, move the entries from here to a new release section.
 
-### Additions
+### Added
+
+### Changed
+
+### Fixed
+
+## [1.1.0] - 2026-03-10
+
+### Added
 
 - Added `topology_spread_constraints` variable to allow distribution of replicas across availability zones.
 
-### Fixes
-
-### Changes
+### Changed
 
 - Updated default `chart_version` to `1.29.0` to support `topologySpreadConstraints`.
 - Updated default `replica_count` to 3 for improved high availability.
