@@ -8,6 +8,7 @@ resource "helm_release" "coredns" {
   values = [
     file("${path.module}/values.yaml"),
     yamlencode({
+      k8sAppLabelOverride       = var.k8s_app_label_override
       replicaCount              = var.replica_count
       service                   = { clusterIP = var.cluster_ip }
       topologySpreadConstraints = var.topology_spread_constraints
