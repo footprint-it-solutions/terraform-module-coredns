@@ -13,7 +13,7 @@ variable "cluster_ip" {
 variable "replica_count" {
   description = "The number of CoreDNS replicas."
   type        = number
-  default     = 3
+  default     = 2
 }
 
 variable "topology_spread_constraints" {
